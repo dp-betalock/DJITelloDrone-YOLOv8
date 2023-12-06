@@ -5,7 +5,7 @@ Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the object
 - The TelloCV_GitHubScript.py script features comments/annotations to help understand what happens at each line of code.
 
 
-# Usage
+# Usage/Instructions
 ## Requirements
 - [Tello App](https://www.dji.com/downloads/djiapp/tello)
 - [Anaconda Package Manager](https://www.anaconda.com/download)
@@ -14,6 +14,7 @@ Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the object
 - Visual Studio Build Tools (insert more info here)
 - [CUDA Toolkit 11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive)
 > CUDA is for NVIDIA GPUs; CUDA Toolkit 11.8 works with PyTorch 2.1.0)
+- Download desired YOLOv8 model size under 'Performance Metrics' and 'Detection (COCO)' at [Ultralytics YOLOv8 Docs](https://docs.ultralytics.com/models/yolov8/#performance-metrics) to acquire a yolov8(n/s/m/l/x).pt file that will be used later
 
 ## Cloning the Repository
 1. In GitHub, under the green '<> Code' button, copy the HTTPS URL

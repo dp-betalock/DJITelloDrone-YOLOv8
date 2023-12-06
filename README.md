@@ -8,7 +8,7 @@ Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the object
 # Usage
 ## Requirements
 - [Tello App](https://www.dji.com/downloads/djiapp/tello)
-- [Anaconda](https://www.anaconda.com/download)
+- [Anaconda Package Manager](https://www.anaconda.com/download)
 - [PyCharm](https://www.jetbrains.com/pycharm/)
 - [Python 3.9](https://www.python.org/downloads/release/python-390/)
 - Visual Studio Build Tools (insert more info here)
@@ -43,4 +43,6 @@ oh wait hol up
 ## Troubleshooting
 - If you get an error related to needing Microsoft Visual C++, go here: (link)
 note: based on my experience, I needed to install the updated version and change system paths.
-- If you get an error related to having multiple copies of OpenMP, . . . 
+- If you get an error related to having multiple copies of OpenMP, . . .
+
+## Important Sources

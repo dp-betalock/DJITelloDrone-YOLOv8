@@ -2,7 +2,7 @@
 "This project allows you to merge YOLOv8 with a DJI Tello Drone for real-time object detection streaming on your computer! You can control the drone with the Tello app and also save the detection results as a video."
 
 ### Notes
-- The TelloCV_GitHubScript.py script features comments/annotations to help understand what happens at each line of code.
+- The TelloCV_GitHubScript.py script features comments/annotations to help in understanding what happens at each line of code.
 
 
 # Usage/Instructions
@@ -27,25 +27,27 @@
 5. After the project is created, you may see a popup that says:
 "**File environment.yml contains project dependencies. Would you like to create a conda environment using it?**" Click '**OK**' as this will install the required packages and libraries required for this project and create a new Conda Environment named '**TelloCV_GitHubEnv**'.
 6. In PyCharm, look at the bottom right corner and click on '**No interpreter**'. To create a new interpreter, click on '**Add New Interpreter**' and then '**Add Local Interpreter**'. Then, click on "**Conda Environment**" on the left column and make sure '**Use existing environment**' is selected. Find '**TelloCV_GitHubEnv**' in the dropdown menu. Finally, click '**OK**'.
-7. Although Python 3.9 should automatically be used, you can verify this by clicking on the interpreter in the bottom right corner, clicking '**Interpreter Settings...**, and scrolling down until you find the '**python**' package with its version number next to it.
+7. Although Python 3.9 should automatically be used, you can verify this by clicking on the interpreter in the bottom right corner, clicking '**Interpreter Settings...'**, and scrolling down until you find the '**python**' package with its version number next to it.
 
 ### Make Script Configurations
 >[!TIP]
 >Look around line 21 for the video export path and line 30 for the YOLO model file.
-1. In the script, change the video path to where you want your exported video to be located (don't forget to use \\ and not \)
+1. In the script, change the video path to where you want your exported video to be located (don't forget to use double backslashes).
 2. If needed, change the name of the YOLOv8 model file to the size you want to use in the script (ex: 'yolov8n.pt', 'yolov8s.pt', 'yolov8m.pt', etc.), as it is preset to use 'yolov8s.pt'.
 3. Drag and drop that yolov8(n/s/m/l/x).pt file from Ultralytics into your PyCharm project.
 
 ### Using the Tello Drone with the script
 1. Make sure the battery is fully charged.
 2. Turn on the Tello Drone until the LED flashes yellow.
-3. On your computer AND your phone/tablet, connect to your Tello WiFi. (If you see what the drone sees on the Tello App, it's definitely connected)
+3. On your computer **AND** your phone/tablet, connect to your Tello WiFi network (if you see what the drone sees on the Tello App, it's definitely connected)
 4. On PyCharm, click 'Run' at the top right.
 5. After a couple of seconds, a connection with the drone will be initialized and you should see a streaming window appear that displays the drone's video stream and anything it detects. This will also make the stream on the Tello App freeze or go black, which is normal.
 6. You are in control of when the drone starts takeoff and when it lands using the **Tello App**. You can grab the drone and test the video feed performance from the streaming window before taking off using the Tello App.
 7. Use the streaming window to fly the drone and see the YOLOv8 object detection results on screen!
-8. Once you are finished flying the drone, click the '**x**' key on the keyboard to stop the stream.
-9. Land the Tello Drone with the Tello App by dragging the altitude joystick really far down and holding it there. If the drone is near the floor and not landing, try dragging the joystick down farther.
+9. Once you are finished flying the drone, land with the Tello App by dragging the altitude joystick really far down and **holding** it there. If the drone is near the floor and not landing, try dragging the joystick down farther.
+10. Click the '**x**' key on the keyboard to stop the stream and the script.
+>[!NOTE]
+>If for any reason you are unable to land the drone, _carefully_ grab the underside of the drone and flip it upside down. This will stop the motors as a safety feature.
 
 ### Viewing the Video Results
 1. The video that is exported starts recording as soon as the streaming window appears, and ends when you close the streaming window with the 'x' key on the keyboard.
@@ -116,14 +118,21 @@ If the compiler is NOT recognized or an error message is displayed, it may indic
 9. Click 'OK'
 10. Restart your computer and repeat the two steps for verifying the installation of the Build Tools (open cmd, type cl.exe...).
 
-### Tello Drone Not Connecting // Tello Drone Auto Landing
+### Tello Drone Not Connecting // Auto Landing // Drifting
 From my experience, when I connect the drone through its WiFi network, the Tello App doesn't always register the connection. The app can be a bit intermittent sometimes and work one day, and not work another day. Try the following:
 - Hold down the power button on the drone for a few seconds until the LED turns off. Wait a few seconds until pressing and holding the power button once again to turn it back on.
 - Close out the Tello App completely. Then, go to the Settings app and find the Tello WiFi. Click the 'i' icon and click 'Forget This Network'. Unfortunately, I do not know about the process for forgetting/removing a WiFi network connection on other devices besides Apple devices. After that, reconnect the Tello.
 - Check for Tello App updates.
+
+Auto landing:
 - The Tello drone has a safety feature that auto-lands the drone after 15 or so seconds of no received input. Using the Tello App seems to prevent this problem, but it is good to know.
 
+Drifting:
+- Fly the drone in a very well-lit environment! It helps keep the drone still.
+- Make sure the blades are not bent.
+- Wind will blow the drone away.
+
 ## Important & helpful sources I used for this project!
-[YOLOv8 Model on GitHub](https://github.com/ultralytics/ultralytics )
-[Ultralytics YOLOv8 Docs](https://docs.ultralytics.com/)
-[DJITelloPy API Reference](https://djitellopy.readthedocs.io/en/latest/tello/ )
+- [YOLOv8 Model on GitHub](https://github.com/ultralytics/ultralytics )
+- [Ultralytics YOLOv8 Docs](https://docs.ultralytics.com/)
+- [DJITelloPy API Reference](https://djitellopy.readthedocs.io/en/latest/tello/ )

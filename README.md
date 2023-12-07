@@ -7,6 +7,7 @@ Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the object
 
 # Usage/Instructions
 ### Requirements
+- Windows 10/11
 - [Tello App](https://www.dji.com/downloads/djiapp/tello)
 - [Anaconda Package Manager](https://www.anaconda.com/download)
 - [PyCharm](https://www.jetbrains.com/pycharm/)
@@ -31,13 +32,62 @@ Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the object
 >Look around line 21 for the video export path, and around line 30 for the yolo model file...
 
 
-## NOTICE:
-- Although the script will finish, the Tello drone will remain in flight when connected to multiple devices. This means that the drone will not land, even if it's told to do so in the script (based on my experience).
-- To land when connected to the computer and Tello app, use the app to lower the altitude until the drone lands.
+### Using the Tello Drone with the script
+1. Make sure the battery is fully charged.
+2. Turn on the Tello Drone until the LED flashes yellow.
+3. On your computer AND your phone/tablet, connect to your Tello WiFi. (If you see what the drone sees on the Tello App, it's definitely connected)
+4. On PyCharm, click 'Run' at the top right.
+5. After a few seconds, you should see a window appear that displays the drones video stream and anything it detects. This will also make the stream on the Tello App freeze or go black, which is normal.
+6. You are in control of when the drone starts takeoff and when it lands with Tello App. You can grab the drone and test the video feed performance from the streaming window before taking off using the Tello App.
+7. Use the streaming window to fly the drone and see the YOLOv8 object detection results on screen!
+8. Once you are finished flying the drone, click the 'x' key on the keyboard to stop the stream.
+9. Land the Tello Drone with the Tello App by dragging the altitude joystick really far down. If the drone is near the floor and not landing, try dragging the joystick down farther.
+
+### Viewing the Video Results
+1. The video that is exported starts recording as soon as the streaming window appears, and ends when you close the streaming window with the 'x' key on the keyboard.
+2. To view that video, go to the file path you set the video export to be located in.
+>Note: If you want multiple videos, make sure you change the video name each time. If the name remains unchanged, it will overwrite that video with that name every time.
+
 
 ## Troubleshooting
-- If you get an error related to needing Microsoft Visual C++, go here: (link)
-note: based on my experience, I needed to install the updated version and change system paths.
-- If you get an error related to having multiple copies of OpenMP, . . .
+### GPU Check
+Using GPU instead of CPU on this project is important for real-time video speed. To check if CUDA is available and that the GPU is being used, run this code:
+```
+import torch
+# Check if CUDA is available
+if torch.cuda.is_available():
+    # Create a tensor on the GPU
+    device = torch.device("cuda")
+    x = torch.rand(5, 5).to(device)
+    print("Tensor on GPU:", x)
+else:
+    print("CUDA is not available.")
+
+#Making sure that GPU is used and not CPU.
+import ultralytics
+ultralytics.checks()
+```
+### Packages/Libraries/Modules not installed
+Use pip or conda to install packages:
+```
+pip install package_name
+conda install package_name
+```
+Or for a specific version of a package:
+```
+pip install package_name==version_number
+conda install package_name=version_number
+```
+
+### Multiple Copies of OpenMP error
+1. In PyCharm go to Run > Edit Configurations... and click on the python script. Find 'Environment Variables:' and paste the following there:
+PYTHONUNBUFFERED=1;KMP_DUPLICATE_LIB_OK=TRUE;OMP_NUM_THREADS=4
+>This is what worked for me at least...
+
+### Requiring Microsoft Visual C++ Build Tools
+Download the installer from [Visual Studio Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+- Make sure to select the "Desktop development with C++" workload during installation.
+
+After that, 
 
 ## Important Sources

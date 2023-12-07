@@ -21,17 +21,12 @@ Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the object
 2. Open Pycharm
 3. Click 'Get from VCS' from the PyCharm welcome screen
 4. Paste the URL and click 'Clone'
-5. After the project is created, you may see a popup that says "File environment.yml contains project dependencies. Would you like to create a conda environment using it?" Click 'OK' as this will install the required packages and libraries required for this project and will be stored in a new Conda Environment.
-6. In PyCharm, look at the bottom right corner and click on "No interpreter." To create a new interpreter, click on "Add New Interpreter" and then "Add Local Interpreter." Then, click on "Conda Environment" on the left column and create a new environment using Python 3.9. Finally, click 'OK'
-oh wait hol up
+5. After the project is created, you may see a popup that says "File environment.yml contains project dependencies. Would you like to create a conda environment using it?" Click 'OK' as this will install the required packages and libraries required for this project and create a new Conda Environment named 'TelloCV_GitHubEnv'.
+6. In PyCharm, look at the bottom right corner and click on 'No interpreter'. To create a new interpreter, click on 'Add New Interpreter' and then 'Add Local Interpreter'. Then, click on "Conda Environment" on the left column and make sure 'Use existing environment' is selected. Find 'TelloCV_GitHubEnv' in the dropdown menu. Finally, click 'OK'.
 
-### Make Script Adjustments
+### Make Script Configurations
 1. In the script, change the video path to where you want your exported video to be located (don't forget to use \\ and not \)
-2. If needed, change the name of the YOLOv8 model file to the size you want to use (ex: yolov8n.pt, yolov8s.pt, yolov8m.pt, etc.), as it is preset to use 'yolov8s.pt'
-
-### Installing Requirements
-1. Install the requirements.txt file using:
-`
+2. If needed, change the name of the YOLOv8 model file to the size you want to use (ex: yolov8n.pt, yolov8s.pt, yolov8m.pt, etc.), as it is preset to use 'yolov8s.pt'`
 
 
 ## NOTICE:

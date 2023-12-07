@@ -1,5 +1,5 @@
 # TelloCV
-"This project allows you to merge YOLOv8 with a DJI Tello Drone for real-time object detection streaming on your computer! You can control the drone with the Tello app and also save the detection results as a video."
+"This project allows you to use YOLOv8 with a DJI Tello Drone for real-time object detection streaming on your computer! You can control the drone with the Tello app and also save the detection results as a video."
 
 ### Notes
 - The TelloCV_GitHubScript.py script features comments/annotations to help in understanding what happens at each line of code.
@@ -25,9 +25,9 @@
 3. Click '**Get from VCS**' from the PyCharm welcome screen
 4. Paste the URL and click 'Clone'
 5. After the project is created, you may see a popup that says:
-"**File environment.yml contains project dependencies. Would you like to create a conda environment using it?**" Click '**OK**' as this will install the required packages and libraries required for this project and create a new Conda Environment named '**TelloCV_GitHubEnv**'.
+"**File environment.yml contains project dependencies. Would you like to create a conda environment using it?**" Click '**OK**' as this will install the required packages and libraries required for this project and create a new Conda Environment named '**TelloCV_GitHubEnv**'. Wait until the processes are complete before moving on.
 6. In PyCharm, look at the bottom right corner and click on '**No interpreter**'. To create a new interpreter, click on '**Add New Interpreter**' and then '**Add Local Interpreter**'. Then, click on "**Conda Environment**" on the left column and make sure '**Use existing environment**' is selected. Find '**TelloCV_GitHubEnv**' in the dropdown menu. Finally, click '**OK**'.
-7. Although Python 3.9 should automatically be used, you can verify this by clicking on the interpreter in the bottom right corner, clicking '**Interpreter Settings...'**, and scrolling down until you find the '**python**' package with its version number next to it.
+7. Although Python 3.9 should automatically be selected, you can verify this by clicking on the interpreter in the bottom right corner, clicking '**Interpreter Settings...'**, and scrolling down until you find the '**python**' package with its version number next to it.
 
 ### Make Script Configurations
 >[!TIP]

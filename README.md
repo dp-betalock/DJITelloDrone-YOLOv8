@@ -1,5 +1,5 @@
 # TelloCV
-Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the YOLOv8 object detection results in a streaming window on your computer. You can control the drone with the Tello app and save the results as a video that you can view after you finish flying the drone!
+"This project allows you to merge YOLOv8 with a DJI Tello Drone for real-time object detection streaming on your computer! You can control the drone with the Tello app and also save the detection results as a video."
 
 ### Notes
 - The TelloCV_GitHubScript.py script features comments/annotations to help understand what happens at each line of code.
@@ -11,6 +11,7 @@ Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the YOLOv8
 >Not recommended to start this project on low storage (unless you already fulfilled most of the requirements, of course)
 - Windows 10/11
 - [Tello App](https://www.dji.com/downloads/djiapp/tello)
+- [DJI Tello Drone](https://store.dji.com/product/tello?vid=38421)
 - [Anaconda Package Manager](https://www.anaconda.com/download)
 - [PyCharm](https://www.jetbrains.com/pycharm/)
 - [Python 3.9](https://www.python.org/downloads/release/python-390/)
@@ -30,7 +31,7 @@ Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the YOLOv8
 
 ### Make Script Configurations
 >[!TIP]
->Look around line 21 for the video export path, and around line 30 for the YOLO model file.
+>Look around line 21 for the video export path and line 30 for the YOLO model file.
 1. In the script, change the video path to where you want your exported video to be located (don't forget to use \\ and not \)
 2. If needed, change the name of the YOLOv8 model file to the size you want to use in the script (ex: 'yolov8n.pt', 'yolov8s.pt', 'yolov8m.pt', etc.), as it is preset to use 'yolov8s.pt'.
 3. Drag and drop that yolov8(n/s/m/l/x).pt file from Ultralytics into your PyCharm project.

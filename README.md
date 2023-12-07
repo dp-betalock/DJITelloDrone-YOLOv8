@@ -2,6 +2,7 @@
 Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the object detection results from your computer, control the drone with the Tello app, and save the results as a video export!
 
 ### Notes
+- There is a good amount of stuff to install; not recommended to start this project on low storage (unless you already fulfilled most of the requirements, of course)
 - The TelloCV_GitHubScript.py script features comments/annotations to help understand what happens at each line of code.
 
 

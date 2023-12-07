@@ -2,18 +2,18 @@
 Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the object detection results from your computer, control the drone with the Tello app, and save the results as a video export!
 
 ### Notes
-- There is a good amount of stuff to install; not recommended to start this project on low storage (unless you already fulfilled most of the requirements, of course)
 - The TelloCV_GitHubScript.py script features comments/annotations to help understand what happens at each line of code.
 
 
 # Usage/Instructions
 ### Requirements
+>[!IMPORTANT]
+- Not recommended to start this project on low storage (unless you already fulfilled most of the requirements, of course)
 - Windows 10/11
 - [Tello App](https://www.dji.com/downloads/djiapp/tello)
 - [Anaconda Package Manager](https://www.anaconda.com/download)
 - [PyCharm](https://www.jetbrains.com/pycharm/)
 - [Python 3.9](https://www.python.org/downloads/release/python-390/)
-- Visual Studio Build Tools (insert more info here)
 - [CUDA Toolkit 11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive)
 > CUDA is for NVIDIA GPUs; CUDA Toolkit 11.8 works with PyTorch 2.1.0)
 - Download your desired YOLOv8 model size under 'Performance Metrics' and 'Detection (COCO)' at [Ultralytics YOLOv8 Docs](https://docs.ultralytics.com/models/yolov8/#performance-metrics) to acquire a yolov8(n/s/m/l/x).pt file that will be used later
@@ -27,11 +27,11 @@ Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the object
 7. In PyCharm, look at the bottom right corner and click on 'No interpreter'. To create a new interpreter, click on 'Add New Interpreter' and then 'Add Local Interpreter'. Then, click on "Conda Environment" on the left column and make sure 'Use existing environment' is selected. Find '**TelloCV_GitHubEnv**' in the dropdown menu. Finally, click 'OK'. Python 3.9 should automatically be used.
 
 ### Make Script Configurations
+>[!TIP]
+>Look around line 21 for the video export path, and around line 30 for the yolo model file...
 1. In the script, change the video path to where you want your exported video to be located (don't forget to use \\ and not \)
 2. If needed, change the name of the YOLOv8 model file to the size you want to use in the script (ex: 'yolov8n.pt', 'yolov8s.pt', 'yolov8m.pt', etc.), as it is preset to use 'yolov8s.pt'.
-3. Drag and drop that yolov8(n/s/m/l/x).pt file from Ultralytics into your project.
->Look around line 21 for the video export path, and around line 30 for the yolo model file...
-
+3. Drag and drop that yolov8(n/s/m/l/x).pt file from Ultralytics into your PyCharm project.
 
 ### Using the Tello Drone with the script
 1. Make sure the battery is fully charged.
@@ -68,7 +68,7 @@ else:
 import ultralytics
 ultralytics.checks()
 ```
-### Packages/Libraries/Modules not installed
+### Packages/Libraries/Modules not installed/found
 Use pip or conda to install packages:
 ```
 pip install package_name
@@ -79,19 +79,46 @@ Or for a specific version of a package:
 pip install package_name==version_number
 conda install package_name=version_number
 ```
+Example:
+```
+ModuleNotFoundError: No module named 'ultralytics'
+```
+Type ```pip install ultralytics``` in the PyCharm terminal.
 
 ### Multiple Copies of OpenMP error
 1. In PyCharm go to Run > Edit Configurations... and click on the python script. Find 'Environment Variables:' and paste the following there:
 
 PYTHONUNBUFFERED=1;KMP_DUPLICATE_LIB_OK=TRUE;OMP_NUM_THREADS=4
->This is what worked for me at least...
+>This is what worked for me...
 
 ### Requiring Microsoft Visual C++ Build Tools
 Download the installer from [Visual Studio Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 - Make sure to select the "Desktop development with C++" workload during installation.
 
-After that, (continue here with verifying that build tools is being used...)
+To verify that the Microsoft Visual C++ Build Tools are successfully installed and available in your command prompt or terminal:
+1. Open the command prompt
+2. Type ```cl.exe```
+If the command was recognized and Microsoft Visual C++ Build Tools are correctly installed, you should see information about the compiler, including its version.
 
-## Important Sources
-Ultralytics (link here)
-DJITelloPy (link here)
+If the compiler is NOT recognized or an error message is displayed, it may indicate an issue with the installation or the PATH configuration.
+1. Find the path by locating the Visual Studio Build Tool installation directory. The address will be in the same format but might have a different year or version number. In File Explorer, you may be able to follow a directory that might look something like this:
+```C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.29.30133\bin\Hostx64\x64```
+3. Copy the entire address.
+4. Open the Windows Start Menu.
+5. Search for "Environment Variables" and click "Edit the system environment variables."
+6. After the System Properties window opens, click the "Environment Variables..." button.
+7. Under the "System Variables" section, select the 'Path' variable and click the "Edit..." button.
+8. After the Edit Environment Variable window opens, click the "New" button and paste the path.
+9. Click 'OK'
+10. Restard your computer if needed and repeat the two steps for verifying the installation of the Build Tools (open cmd, type cl.exe...).
+
+### Tello Drone Not Connecting // Tello Drone Auto Landing
+From my experience, I connected the drone through its WiFi network, but the Tello App didn't register the connection. The App can be a bit intermittent sometimes and work one day, and not work another day. Try the following:
+- Hold down the power button on the drone for a few seconds until the LED turns off. Wait a few seconds until pressing and holding the power button once again to turn it back on.
+- Close out the Tello App completely. Then, go to the Settings app and find the Tello WiFi. Click the 'i' icon and click 'Forget This Network'. Unfortunately, I do not know about the process for forgetting/removing a WiFi network connection on other devices besides Apple devices. After that, reconnect the Tello.
+- Check for Tello App updates.
+
+## Important & helpful sources I used for this project!
+[YOLOv8 Model on GitHub](https://github.com/ultralytics/ultralytics )
+[Ultralytics YOLOv8 Docs](https://docs.ultralytics.com/)
+[DJITelloPy API Reference](https://djitellopy.readthedocs.io/en/latest/tello/ )

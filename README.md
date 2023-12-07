@@ -82,6 +82,7 @@ conda install package_name=version_number
 
 ### Multiple Copies of OpenMP error
 1. In PyCharm go to Run > Edit Configurations... and click on the python script. Find 'Environment Variables:' and paste the following there:
+
 PYTHONUNBUFFERED=1;KMP_DUPLICATE_LIB_OK=TRUE;OMP_NUM_THREADS=4
 >This is what worked for me at least...
 
@@ -89,6 +90,6 @@ PYTHONUNBUFFERED=1;KMP_DUPLICATE_LIB_OK=TRUE;OMP_NUM_THREADS=4
 Download the installer from [Visual Studio Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 - Make sure to select the "Desktop development with C++" workload during installation.
 
-After that, 
+After that, (continue here with verifying that build tools is being used...)
 
 ## Important Sources

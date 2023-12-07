@@ -1,4 +1,4 @@
-﻿name: TelloCV_GitHubEnvreq
+﻿name: TelloCV_GitHubEnv
 channels:
   - pytorch
   - nvidia

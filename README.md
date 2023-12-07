@@ -96,7 +96,7 @@ Download the installer from [Visual Studio Build Tools](https://visualstudio.mic
 - Make sure to select the "Desktop development with C++" workload during installation.
 
 To verify that the Microsoft Visual C++ Build Tools are successfully installed and available in your command prompt or terminal:
-1. Open the command prompt
+1. Open the command prompt on your computer
 2. Type ```cl.exe```
 If the command was recognized and Microsoft Visual C++ Build Tools are correctly installed, you should see information about the compiler, including its version.
 
@@ -110,7 +110,7 @@ If the compiler is NOT recognized or an error message is displayed, it may indic
 7. Under the "System Variables" section, select the 'Path' variable and click the "Edit..." button.
 8. After the Edit Environment Variable window opens, click the "New" button and paste the path.
 9. Click 'OK'
-10. Restard your computer if needed and repeat the two steps for verifying the installation of the Build Tools (open cmd, type cl.exe...).
+10. Restart your computer if needed and repeat the two steps for verifying the installation of the Build Tools (open cmd, type cl.exe...).
 
 ### Tello Drone Not Connecting // Tello Drone Auto Landing
 From my experience, I connected the drone through its WiFi network, but the Tello App didn't register the connection. The App can be a bit intermittent sometimes and work one day, and not work another day. Try the following:

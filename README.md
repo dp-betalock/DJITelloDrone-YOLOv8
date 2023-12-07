@@ -28,6 +28,7 @@ Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the object
 1. In the script, change the video path to where you want your exported video to be located (don't forget to use \\ and not \)
 2. If needed, change the name of the YOLOv8 model file to the size you want to use (ex: yolov8n.pt, yolov8s.pt, yolov8m.pt, etc.), as it is preset to use 'yolov8s.pt'.
 3. Drag and drop that yolov8(n/s/m/l/x).pt file into your project.
+>Look around line 21 for the video export path, and around line 30 for the yolo model file...
 
 
 ## NOTICE:

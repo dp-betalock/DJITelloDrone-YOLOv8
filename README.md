@@ -1,5 +1,5 @@
 # TelloCV
-Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the object detection results from your computer, control the drone with the Tello app, and save the results as a video export!
+Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the YOLOv8 object detection results in a streaming window on your computer. You can control the drone with the Tello app and save the results as a video that you can view after you finish flying the drone!
 
 ### Notes
 - The TelloCV_GitHubScript.py script features comments/annotations to help understand what happens at each line of code.
@@ -19,16 +19,18 @@ Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the object
 - Download your desired YOLOv8 model size under 'Performance Metrics' and 'Detection (COCO)' at [Ultralytics YOLOv8 Docs](https://docs.ultralytics.com/models/yolov8/#performance-metrics) to acquire a yolov8(n/s/m/l/x).pt file that will be used later
 
 ### Cloning the Repository
-1. In GitHub, under the green '<> Code' button, copy the HTTPS URL
+1. In GitHub, under the green '**<> Code**' button, copy the HTTPS URL
 2. Open Pycharm
-3. Click 'Get from VCS' from the PyCharm welcome screen
+3. Click '**Get from VCS**' from the PyCharm welcome screen
 4. Paste the URL and click 'Clone'
-5. After the project is created, you may see a popup that says: "**File environment.yml contains project dependencies. Would you like to create a conda environment using it?**" Click 'OK' as this will install the required packages and libraries required for this project and create a new Conda Environment named 'TelloCV_GitHubEnv'.
-7. In PyCharm, look at the bottom right corner and click on 'No interpreter'. To create a new interpreter, click on 'Add New Interpreter' and then 'Add Local Interpreter'. Then, click on "Conda Environment" on the left column and make sure 'Use existing environment' is selected. Find '**TelloCV_GitHubEnv**' in the dropdown menu. Finally, click 'OK'. Python 3.9 should automatically be used.
+5. After the project is created, you may see a popup that says:
+"**File environment.yml contains project dependencies. Would you like to create a conda environment using it?**" Click '**OK**' as this will install the required packages and libraries required for this project and create a new Conda Environment named '**TelloCV_GitHubEnv**'.
+6. In PyCharm, look at the bottom right corner and click on '**No interpreter**'. To create a new interpreter, click on '**Add New Interpreter**' and then '**Add Local Interpreter**'. Then, click on "**Conda Environment**" on the left column and make sure '**Use existing environment**' is selected. Find '**TelloCV_GitHubEnv**' in the dropdown menu. Finally, click '**OK**'.
+7. Although Python 3.9 should automatically be used, you can verify this by clicking on the interpreter in the bottom right corner, clicking '**Interpreter Settings...**, and scrolling down until you find the '**python**' package with its version number next to it.
 
 ### Make Script Configurations
 >[!TIP]
->Look around line 21 for the video export path, and around line 30 for the yolo model file...
+>Look around line 21 for the video export path, and around line 30 for the YOLO model file.
 1. In the script, change the video path to where you want your exported video to be located (don't forget to use \\ and not \)
 2. If needed, change the name of the YOLOv8 model file to the size you want to use in the script (ex: 'yolov8n.pt', 'yolov8s.pt', 'yolov8m.pt', etc.), as it is preset to use 'yolov8s.pt'.
 3. Drag and drop that yolov8(n/s/m/l/x).pt file from Ultralytics into your PyCharm project.
@@ -38,16 +40,17 @@ Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the object
 2. Turn on the Tello Drone until the LED flashes yellow.
 3. On your computer AND your phone/tablet, connect to your Tello WiFi. (If you see what the drone sees on the Tello App, it's definitely connected)
 4. On PyCharm, click 'Run' at the top right.
-5. After a few seconds, you should see a window appear that displays the drones video stream and anything it detects. This will also make the stream on the Tello App freeze or go black, which is normal.
-6. You are in control of when the drone starts takeoff and when it lands with Tello App. You can grab the drone and test the video feed performance from the streaming window before taking off using the Tello App.
+5. After a couple of seconds, a connection with the drone will be initialized and you should see a streaming window appear that displays the drone's video stream and anything it detects. This will also make the stream on the Tello App freeze or go black, which is normal.
+6. You are in control of when the drone starts takeoff and when it lands using the **Tello App**. You can grab the drone and test the video feed performance from the streaming window before taking off using the Tello App.
 7. Use the streaming window to fly the drone and see the YOLOv8 object detection results on screen!
-8. Once you are finished flying the drone, click the 'x' key on the keyboard to stop the stream.
-9. Land the Tello Drone with the Tello App by dragging the altitude joystick really far down. If the drone is near the floor and not landing, try dragging the joystick down farther.
+8. Once you are finished flying the drone, click the '**x**' key on the keyboard to stop the stream.
+9. Land the Tello Drone with the Tello App by dragging the altitude joystick really far down and holding it there. If the drone is near the floor and not landing, try dragging the joystick down farther.
 
 ### Viewing the Video Results
 1. The video that is exported starts recording as soon as the streaming window appears, and ends when you close the streaming window with the 'x' key on the keyboard.
 2. To view that video, go to the file path you set the video export to be located in.
->Note: If you want multiple videos, make sure you change the video name each time. If the name remains unchanged, it will overwrite that video with that name every time.
+>[!NOTE]
+>If you want multiple videos, make sure you change the video name each time. If the name remains unchanged, it will overwrite the video with that name every time.
 
 
 ## Troubleshooting
@@ -100,8 +103,8 @@ To verify that the Microsoft Visual C++ Build Tools are successfully installed a
 2. Type ```cl.exe```
 If the command was recognized and Microsoft Visual C++ Build Tools are correctly installed, you should see information about the compiler, including its version.
 
-If the compiler is NOT recognized or an error message is displayed, it may indicate an issue with the installation or the PATH configuration.
-1. Find the path by locating the Visual Studio Build Tool installation directory. The address will be in the same format but might have a different year or version number. In File Explorer, you may be able to follow a directory that might look something like this:
+If the compiler is NOT recognized or an error message is displayed, it may indicate an issue with the installation or the PATH configuration. Do the following carefully:
+1. Find the path by locating the Visual Studio Build Tool installation directory. The address will be in the same format but might have a different year or version number. That being said, in File Explorer, you may be able to follow a directory that might look something like this:
 ```C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.29.30133\bin\Hostx64\x64```
 3. Copy the entire address.
 4. Open the Windows Start Menu.
@@ -110,13 +113,14 @@ If the compiler is NOT recognized or an error message is displayed, it may indic
 7. Under the "System Variables" section, select the 'Path' variable and click the "Edit..." button.
 8. After the Edit Environment Variable window opens, click the "New" button and paste the path.
 9. Click 'OK'
-10. Restart your computer if needed and repeat the two steps for verifying the installation of the Build Tools (open cmd, type cl.exe...).
+10. Restart your computer and repeat the two steps for verifying the installation of the Build Tools (open cmd, type cl.exe...).
 
 ### Tello Drone Not Connecting // Tello Drone Auto Landing
-From my experience, I connected the drone through its WiFi network, but the Tello App didn't register the connection. The App can be a bit intermittent sometimes and work one day, and not work another day. Try the following:
+From my experience, when I connect the drone through its WiFi network, the Tello App doesn't always register the connection. The app can be a bit intermittent sometimes and work one day, and not work another day. Try the following:
 - Hold down the power button on the drone for a few seconds until the LED turns off. Wait a few seconds until pressing and holding the power button once again to turn it back on.
 - Close out the Tello App completely. Then, go to the Settings app and find the Tello WiFi. Click the 'i' icon and click 'Forget This Network'. Unfortunately, I do not know about the process for forgetting/removing a WiFi network connection on other devices besides Apple devices. After that, reconnect the Tello.
 - Check for Tello App updates.
+- The Tello drone has a safety feature that auto-lands the drone after 15 or so seconds of no received input. Using the Tello App seems to prevent this problem, but it is good to know.
 
 ## Important & helpful sources I used for this project!
 [YOLOv8 Model on GitHub](https://github.com/ultralytics/ultralytics )

@@ -6,7 +6,7 @@ Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the object
 
 
 # Usage/Instructions
-## Requirements
+### Requirements
 - [Tello App](https://www.dji.com/downloads/djiapp/tello)
 - [Anaconda Package Manager](https://www.anaconda.com/download)
 - [PyCharm](https://www.jetbrains.com/pycharm/)
@@ -16,23 +16,20 @@ Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the object
 > CUDA is for NVIDIA GPUs; CUDA Toolkit 11.8 works with PyTorch 2.1.0)
 - Download your desired YOLOv8 model size under 'Performance Metrics' and 'Detection (COCO)' at [Ultralytics YOLOv8 Docs](https://docs.ultralytics.com/models/yolov8/#performance-metrics) to acquire a yolov8(n/s/m/l/x).pt file that will be used later
 
-## Cloning the Repository
+### Cloning the Repository
 1. In GitHub, under the green '<> Code' button, copy the HTTPS URL
 2. Open Pycharm
-3. Click 'Get from VCS'
-4. Paste the URL to clone the repository
-- Open 'Python Interpreter' dropdown tab
-- Change environment name
-- Select 'Conda'
-- Set Python version to 3.9
-
+3. Click 'Get from VCS' from the PyCharm welcome screen
+4. Paste the URL and click 'Clone'
+5. After the project is created, you may see a popup that says "File environment.yml contains project dependencies. Would you like to create a conda environment using it?" Click 'OK' as this will install the required packages and libraries required for this project and will be stored in a new Conda Environment.
+6. In PyCharm, look at the bottom right corner and click on "No interpreter." To create a new interpreter, click on "Add New Interpreter" and then "Add Local Interpreter." Then, click on "Conda Environment" on the left column and create a new environment using Python 3.9. Finally, click 'OK'
 oh wait hol up
 
-## Make Script Adjustments
+### Make Script Adjustments
 1. In the script, change the video path to where you want your exported video to be located (don't forget to use \\ and not \)
 2. If needed, change the name of the YOLOv8 model file to the size you want to use (ex: yolov8n.pt, yolov8s.pt, yolov8m.pt, etc.), as it is preset to use 'yolov8s.pt'
 
-## Installing Requirements
+### Installing Requirements
 1. Install the requirements.txt file using:
 `
 

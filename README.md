@@ -28,8 +28,8 @@ Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the object
 
 ### Make Script Configurations
 1. In the script, change the video path to where you want your exported video to be located (don't forget to use \\ and not \)
-2. If needed, change the name of the YOLOv8 model file to the size you want to use (ex: yolov8n.pt, yolov8s.pt, yolov8m.pt, etc.), as it is preset to use 'yolov8s.pt'.
-3. Drag and drop that yolov8(n/s/m/l/x).pt file into your project.
+2. If needed, change the name of the YOLOv8 model file to the size you want to use in the script (ex: 'yolov8n.pt', 'yolov8s.pt', 'yolov8m.pt', etc.), as it is preset to use 'yolov8s.pt'.
+3. Drag and drop that yolov8(n/s/m/l/x).pt file from Ultralytics into your project.
 >Look around line 21 for the video export path, and around line 30 for the yolo model file...
 
 
@@ -93,3 +93,5 @@ Download the installer from [Visual Studio Build Tools](https://visualstudio.mic
 After that, (continue here with verifying that build tools is being used...)
 
 ## Important Sources
+Ultralytics (link here)
+DJITelloPy (link here)

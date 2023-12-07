@@ -8,7 +8,7 @@ Combine YOLOv8 with a DJI Tello Drone! This project allows you to see the object
 # Usage/Instructions
 ### Requirements
 >[!IMPORTANT]
-- Not recommended to start this project on low storage (unless you already fulfilled most of the requirements, of course)
+>Not recommended to start this project on low storage (unless you already fulfilled most of the requirements, of course)
 - Windows 10/11
 - [Tello App](https://www.dji.com/downloads/djiapp/tello)
 - [Anaconda Package Manager](https://www.anaconda.com/download)

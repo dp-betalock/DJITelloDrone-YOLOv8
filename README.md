@@ -35,6 +35,7 @@
 1. In the script, change the video path to where you want your exported video to be located (don't forget to use double backslashes).
 2. If needed, change the name of the YOLOv8 model file to the size you want to use in the script (ex: 'yolov8n.pt', 'yolov8s.pt', 'yolov8m.pt', etc.), as it is preset to use 'yolov8s.pt'.
 3. Drag and drop that yolov8(n/s/m/l/x).pt file from Ultralytics into your PyCharm project.
+4. Type ```pip install opencv-python ultralytics djitellopy``` in the PyCharm terminal. These are the last few pip packages that need to be installed.
 
 ### Using the Tello Drone with the script
 1. Make sure the battery is fully charged.

@@ -41,7 +41,7 @@
 ### Using the Tello Drone with the script
 1. Make sure the battery is fully charged.
 2. Turn on the Tello Drone until the LED flashes yellow.
-3. On your computer **AND** your phone/tablet, connect to your Tello WiFi network (if you see what the drone sees on the Tello App, it's definitely connected)
+3. On your computer **AND** your phone/tablet, connect to your Tello WiFi network. It might look something like TELLO-XXXX## (if you see what the drone sees on the Tello App, it's definitely connected).
 4. On PyCharm, click 'Run' at the top right.
 5. After a couple of seconds, a connection with the drone will be initialized and you should see a streaming window appear that displays the drone's video stream and anything it detects. This will also make the stream on the Tello App freeze or go black, which is normal.
 6. You are in control of when the drone starts takeoff and when it lands using the **Tello App**. You can grab the drone and test the video feed performance from the streaming window before taking off using the Tello App.

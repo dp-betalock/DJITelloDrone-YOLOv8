@@ -147,6 +147,7 @@ Drifting:
 - Wind will blow the drone away.
 
 ## Important Sources // Citations
+These sources helped me make this project come true.
 Any licenses from the GitHub repositories linked below are included in the LICENSE file in this repository.
 - [YOLOv8 Model on GitHub](https://github.com/ultralytics/ultralytics )
 - [Ultralytics YOLOv8 Docs](https://docs.ultralytics.com/)

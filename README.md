@@ -3,7 +3,7 @@
 
 ### Notes
 - The TelloCV_GitHubScript.py script features comments/annotations to help in understanding what happens at each line of code.
-- This is one of my first projects uploaded onto GitHub, and I am also learning how to use GitHub for the first time. It may not be perfect, but I did my best to ensure that this project functions correctly after cloning and I included a troubleshooting section near the bottom of this readme in case problems arise.
+- This is one of my first projects uploaded onto GitHub, and I am also learning how to use GitHub. It may not be perfect, but I did my best to ensure that this project functions correctly after cloning and I included a troubleshooting section near the bottom of this readme in case problems arise.
 
 ### Key Features
 - YOLOv8 object detection 👀

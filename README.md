@@ -59,7 +59,7 @@
 
 ## Troubleshooting
 ### GPU Check / Slow video feed problems
-Using GPU instead of CPU on this project is important for real-time video speed. To check if CUDA is available and that the GPU is being used, run this code:
+Using GPU instead of CPU on this project is important for real-time video speed. Setting your GPU to performance mode also helps. To check if CUDA is available and that the GPU is being used, run this code:
 ```
 import torch
 # Check if CUDA is available

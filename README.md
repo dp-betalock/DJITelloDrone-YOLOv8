@@ -58,7 +58,7 @@
 
 
 ## Troubleshooting
-### GPU Check
+### GPU Check / Slow video feed problems
 Using GPU instead of CPU on this project is important for real-time video speed. To check if CUDA is available and that the GPU is being used, run this code:
 ```
 import torch
@@ -71,10 +71,18 @@ if torch.cuda.is_available():
 else:
     print("CUDA is not available.")
 
-#Making sure that GPU is used and not CPU.
+# Check the version of CUDA
+cuda_version = torch.version.cuda
+print(f"CUDA Version: {cuda_version}")
+
+# Making sure that GPU is used and not CPU.
 import ultralytics
 ultralytics.checks()
 ```
+If CUDA was detected as not available, or 'CUDA Version: None', run the following code in the PyCharm terminal and it should do the trick:
+
+```conda install pytorch torchvision torchaudio -c pytorch```
+
 ### Packages/Libraries/Modules not installed/found
 Use pip or conda to install packages:
 ```

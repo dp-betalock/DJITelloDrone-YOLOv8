@@ -3,8 +3,12 @@
 
 ### Notes
 - The TelloCV_GitHubScript.py script features comments/annotations to help in understanding what happens at each line of code.
-- This is one of my first projects uploaded onto GitHub, and I am also learning how to use GitHub for the first time. It may not be perfect, but I did my best to ensure that this project functions correctly after cloning and I included a troubleshooting section at the bottom of this readme in case problems arise. 
+- This is one of my first projects uploaded onto GitHub, and I am also learning how to use GitHub for the first time. It may not be perfect, but I did my best to ensure that this project functions correctly after cloning and I included a troubleshooting section at the bottom of this readme in case problems arise.
 
+### Key Features
+- YOLOv8
+- Drone is controlled with Tello app
+- Exported video results
 
 # Usage/Instructions
 ### Requirements
@@ -143,6 +147,8 @@ Drifting:
 - Wind will blow the drone away.
 
 ## Important & helpful sources I used for this project!
+Any licenses from the GitHub repositories linked below are included in the LICENSE.txt file in this repository.
 - [YOLOv8 Model on GitHub](https://github.com/ultralytics/ultralytics )
 - [Ultralytics YOLOv8 Docs](https://docs.ultralytics.com/)
+- [DJITelloPy GitHub](https://github.com/damiafuentes/DJITelloPy)
 - [DJITelloPy API Reference](https://djitellopy.readthedocs.io/en/latest/tello/ )
